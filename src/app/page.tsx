@@ -10,7 +10,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <Image src="/logo.svg" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
+            <Image src="/image/logo.svg" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
             <div className="text-white">
               <div className="text-xl font-bold">GovConnect</div>
               <div className="text-sm">MANIPUR</div>
@@ -65,7 +65,7 @@ export default function HomePage() {
       <main className="flex-1">
         <section id="home" className="relative w-full py-24 md:py-32 lg:py-40 xl:py-48">
           <Image
-            src="/background.png"
+            src="/image/background.png"
             alt="Background"
             data-ai-hint="Manipur landscape"
             fill
@@ -89,7 +89,7 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <Image src="/department-user.svg" alt="Department User" width={64} height={64} />
+                    <Image src="/image/department-user.svg" alt="Department User" width={64} height={64} />
                   </div>
                   <span className="text-center font-semibold text-white">
                     Login as<br/>Department
@@ -101,7 +101,7 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <Image src="/citizen.svg" alt="Citizen" width={64} height={64} />
+                    <Image src="/image/citizen.svg" alt="Citizen" width={64} height={64} />
                   </div>
                   <span className="mt-2 text-center font-semibold text-white">
                     Login as<br/>Citizen
@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6">
             <div className="flex flex-col items-center gap-2">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
-                <Image src="/departments.svg" alt="Departments" width={40} height={40} />
+                <Image src="/image/departments.svg" alt="Departments" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">86</div>
               <div className="text-sm font-medium text-white/80">
@@ -189,7 +189,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
               <Link href="#" className="flex items-center gap-2" prefetch={false}>
-                 <Image src="/footer-logo.svg" alt="GovConnect Logo" width={24} height={24} className="h-8 w-8" />
+                 <Image src="/image/footer-logo.svg" alt="GovConnect Logo" width={24} height={24} className="h-8 w-8" />
                 <div className="text-white">
                   <div className="text-xl font-bold">GovConnect</div>
                   <div className="text-sm">MANIPUR</div>

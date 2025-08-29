@@ -72,12 +72,14 @@ export default function HomePage() {
                 Integrated Public <br/> Grievance Redressal System
                 </h1>
               </div>
-              <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
-                TRACK GRIEVANCE
-              </Button>
+              <Link href="/track-grievance">
+                <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
+                  TRACK GRIEVANCE
+                </Button>
+              </Link>
               <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
               <Link
-    href="#"
+    href="/login/department"
     className="group flex flex-col items-center gap-2"
     prefetch={false}
   >
@@ -89,7 +91,7 @@ export default function HomePage() {
     </span>
   </Link>
   <Link
-    href="#"
+    href="/login/citizen"
     className="group flex flex-col items-center gap-2"
     prefetch={false}
   >

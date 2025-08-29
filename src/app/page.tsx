@@ -51,13 +51,7 @@ export default function HomePage() {
             >
               Contact Us
             </Link>
-            <Link
-              href="#"
-              className="rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-white"
-              prefetch={false}
-            >
-              Reports
-            </Link>
+            
           </nav>
         </div>
       </header>
@@ -81,32 +75,32 @@ export default function HomePage() {
               <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
                 TRACK GRIEVANCE
               </Button>
-              <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:gap-4">
-                <Link
-                  href="#"
-                  className="group flex flex-col items-center gap-2"
-                  prefetch={false}
-                >
-                  <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-                    <Image src="/image/department_login_normal.png" alt="Department User" width={96} height={96} />
-                  </div>
-                  <span className="text-center font-semibold text-white">
-                    Login as<br/>Department
-                  </span>
-                </Link>
-                <Link
-                  href="#"
-                  className="group flex flex-col items-center gap-2"
-                  prefetch={false}
-                >
-                  <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-                    <Image src="/image/citizen_login_normal.png" alt="Citizen" width={96} height={96} />
-                  </div>
-                  <span className="mt-2 text-center font-semibold text-white">
-                    Login as<br/>Citizen
-                  </span>
-                </Link>
-              </div>
+              <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
+              <Link
+    href="#"
+    className="group flex flex-col items-center gap-2"
+    prefetch={false}
+  >
+    <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
+      <Image src="/image/department_login_normal.png" alt="Department User" width={96} height={96} />
+    </div>
+    <span className="text-center font-semibold text-white">
+      Login as<br/>Department
+    </span>
+  </Link>
+  <Link
+    href="#"
+    className="group flex flex-col items-center gap-2"
+    prefetch={false}
+  >
+    <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
+      <Image src="/image/citizen_login_normal.png" alt="Citizen" width={96} height={96} />
+    </div>
+    <span className="text-center font-semibold text-white">
+      Login as<br/>Citizen
+    </span>
+  </Link>
+</div>
             </div>
           </div>
         </section>
@@ -158,8 +152,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="grievance-profile" className="w-full bg-[#111827] py-20 md:py-28">
-          <div className="container mx-auto px-4 md:px-6">
+        <section id="grievance-profile" className="relative w-full py-20 md:py-28">
+          <Image
+            src="https://picsum.photos/1200/800"
+            alt="Grievance Profile Background"
+            data-ai-hint="abstract geometric pattern"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="container relative mx-auto px-4 md:px-6">
             <h2 className="mb-12 text-center text-4xl font-bold text-white">
               Grievance Profile
             </h2>

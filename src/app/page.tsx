@@ -72,7 +72,11 @@ export default function HomePage() {
                 Integrated Public <br/> Grievance Redressal System
                 </h1>
               </div>
-            
+              {/* <Link href="https://grievancestaging.globizsapp.com/app/#/citizen-login-with-case">
+                <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
+                  TRACK GRIEVANCE
+                </Button>
+              </Link> */}
               <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
               <Link
     href="https://grievancestaging.globizsapp.com/app/#/login"

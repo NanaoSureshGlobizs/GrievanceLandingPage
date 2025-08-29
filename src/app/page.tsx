@@ -56,7 +56,7 @@ export default function HomePage() {
         </div>
       </header>
       <main className="flex-1">
-        <section id="home" className="relative w-full py-24 md:py-32 lg:py-40 xl:py-48">
+        <section id="home" className="relative flex items-center justify-center w-full min-h-screen">
           <Image
             src="/image/background.png"
             alt="Background"

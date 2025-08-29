@@ -113,40 +113,24 @@ export default function HomePage() {
         <section className="w-full bg-blue-700 py-12 md:py-20">
           <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center">
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center">
-                <Image src="/image/department_normal.png" alt="Departments" width={40} height={40} />
-              </div>
+              <Image src="/image/department_normal.png" alt="Departments" width={64} height={64} />
               <div className="text-4xl font-bold text-white">86</div>
-              <div className="text-sm font-medium text-white/80">
-                <Image src="/image/departments.png" alt="Departments" width={100} height={16} />
-              </div>
+              <div className="font-medium text-white/90">DEPARTMENTS</div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center">
-                <Image src="/image/grievance_lodged_normal.png" alt="Grievance Lodged" width={40} height={40} />
-              </div>
+              <Image src="/image/log_normal.png" alt="Grievance Lodged" width={64} height={64} />
               <div className="text-4xl font-bold text-white">45,571</div>
-              <div className="text-sm font-medium text-white/80">
-                <Image src="/image/grievance_lodged.png" alt="Grievance Lodged" width={120} height={16} />
-              </div>
+              <div className="font-medium text-white/90">GRIEVANCE LODGED</div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center">
-                <Image src="/image/grievance_redressed_normal.png" alt="Grievance Redressed" width={40} height={40} />
-              </div>
+              <Image src="/image/redressel_normal.png" alt="Grievance Redressed" width={64} height={64} />
               <div className="text-4xl font-bold text-white">25,869</div>
-              <div className="text-sm font-medium text-white/80">
-                <Image src="/image/grievance_redressed.png" alt="Grievance Redressed" width={140} height={16} />
-              </div>
+              <div className="font-medium text-white/90">GRIEVANCE REDRESSED</div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center">
-                <Image src="/image/open_grievance_normal.png" alt="Open Grievance" width={40} height={40} />
-              </div>
+              <Image src="/image/open_normal.png" alt="Open Grievance" width={64} height={64} />
               <div className="text-4xl font-bold text-white">258</div>
-              <div className="text-sm font-medium text-white/80">
-                <Image src="/image/open_grievance.png" alt="Open Grievance" width={120} height={16} />
-              </div>
+              <div className="font-medium text-white/90">OPEN GRIEVANCE</div>
             </div>
           </div>
         </section>

@@ -7,7 +7,7 @@ import { GrievanceChart } from "@/components/grievance-chart";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
-      <header className="w-full absolute top-0 z-50">
+      <header className="w-full top-0 z-50">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
@@ -16,7 +16,7 @@ export default function HomePage() {
               <div className="text-sm">MANIPUR</div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-1 rounded-full bg-black/50 backdrop-blur-sm px-4 py-2 md:flex">
+          <nav className="hidden items-center gap-1 rounded-full bg-[linear-gradient(90deg,_#003688_0%,_#1AA3D8_100%)] px-4 py-2 md:flex">
             <Link
               href="#home"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"

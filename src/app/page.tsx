@@ -154,7 +154,7 @@ export default function HomePage() {
 
         <section id="grievance-profile" className="relative w-full py-20 md:py-28">
           <Image
-            src="https://picsum.photos/1200/800"
+            src="/image/profile_background.png"
             alt="Grievance Profile Background"
             data-ai-hint="abstract geometric pattern"
             fill

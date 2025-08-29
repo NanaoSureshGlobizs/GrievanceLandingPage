@@ -31,35 +31,35 @@ export default function HomePage() {
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             <Link
-              href="#"
+              href="#home"
               className="text-sm font-medium text-white/80 hover:text-white"
               prefetch={false}
             >
               Home
             </Link>
             <Link
-              href="#"
+              href="#about-us"
               className="text-sm font-medium text-white/80 hover:text-white"
               prefetch={false}
             >
               About Us
             </Link>
             <Link
-              href="#"
+              href="#grievance-profile"
               className="text-sm font-medium text-white/80 hover:text-white"
               prefetch={false}
             >
               Grievance Profile
             </Link>
             <Link
-              href="#"
+              href="#home"
               className="text-sm font-medium text-white/80 hover:text-white"
               prefetch={false}
             >
               Track Grievance
             </Link>
             <Link
-              href="#"
+              href="#contact-us"
               className="text-sm font-medium text-white/80 hover:text-white"
               prefetch={false}
             >
@@ -76,7 +76,7 @@ export default function HomePage() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="relative w-full py-24 md:py-32 lg:py-40 xl:py-48">
+        <section id="home" className="relative w-full py-24 md:py-32 lg:py-40 xl:py-48">
           <Image
             src="https://picsum.photos/1920/1080"
             alt="Background"
@@ -167,7 +167,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="w-full bg-white py-20 text-gray-800 md:py-28">
+        <section id="about-us" className="w-full bg-white py-20 text-gray-800 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mx-auto max-w-3xl rounded-lg bg-gray-50 p-8 shadow-lg">
               <h2 className="mb-4 text-3xl font-bold">About Us</h2>
@@ -191,7 +191,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#111827] py-20 md:py-28">
+        <section id="grievance-profile" className="w-full bg-[#111827] py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="mb-12 text-center text-4xl font-bold text-white">
               Grievance Profile
@@ -200,7 +200,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <footer className="w-full bg-blue-900 text-white">
+      <footer id="contact-us" className="w-full bg-blue-900 text-white">
         <div className="container mx-auto px-4 py-12 md:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
@@ -289,3 +289,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    

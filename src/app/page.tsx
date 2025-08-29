@@ -10,22 +10,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-8 w-8 text-white"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-              <path d="M12 6c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" />
-              <path d="M15 9l-3 3-3-3" />
-            </svg>
+            <Image src="/logo.svg" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
             <div className="text-white">
               <div className="text-xl font-bold">GovConnect</div>
               <div className="text-sm">MANIPUR</div>
@@ -80,7 +65,7 @@ export default function HomePage() {
       <main className="flex-1">
         <section id="home" className="relative w-full py-24 md:py-32 lg:py-40 xl:py-48">
           <Image
-            src="https://picsum.photos/1920/1080"
+            src="/background.png"
             alt="Background"
             data-ai-hint="Manipur landscape"
             fill
@@ -104,17 +89,10 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M19.46 16.2L20.58 15.08C21.4621 14.198 21.9983 13.0135 22 11.77C22.0017 10.5265 21.4655 9.34203 20.58 8.46003C19.698 7.57793 18.5135 7.04173 17.27 7.04003C16.0265 7.03833 14.842 7.57453 13.96 8.46003L12.92 9.50003" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M17.25 10.25C17.9404 10.25 18.5 9.69036 18.5 9C18.5 8.30964 17.9404 7.75 17.25 7.75C16.5596 7.75 16 8.30964 16 9C16 9.69036 16.5596 10.25 17.25 10.25Z" fill="#3b82f6"/>
-                      <path d="M4.54004 16.2L3.42004 15.08C2.53794 14.198 2.00174 13.0135 2.00004 11.77C1.99834 10.5265 2.53454 9.34203 3.42004 8.46003C4.30204 7.57793 5.48654 7.04173 6.73004 7.04003C7.97354 7.03833 9.15804 7.57453 10.04 8.46003L11.08 9.50003" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M6.75 10.25C7.44036 10.25 8 9.69036 8 9C8 8.30964 7.44036 7.75 6.75 7.75C6.05964 7.75 5.5 8.30964 5.5 9C5.5 9.69036 6.05964 10.25 6.75 10.25Z" fill="#3b82f6"/>
-                      <path d="M12.5 16H11.5C9.29086 16 7.5 17.7909 7.5 20V21H16.5V20C16.5 17.7909 14.7091 16 12.5 16Z" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <Image src="/department-user.svg" alt="Department User" width={64} height={64} />
                   </div>
                   <span className="text-center font-semibold text-white">
-                    Department<br/>User
+                    Login as<br/>Department
                   </span>
                 </Link>
                 <Link
@@ -123,15 +101,10 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.5 6.5C12.5 8.98528 10.4853 11 8 11C5.51472 11 3.5 8.98528 3.5 6.5C3.5 4.01472 5.51472 2 8 2C10.4853 2 12.5 4.01472 12.5 6.5Z" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M20.5 10C20.5 11.3807 19.3807 12.5 18 12.5C16.6193 12.5 15.5 11.3807 15.5 10C15.5 8.61929 16.6193 7.5 18 7.5C19.3807 7.5 20.5 8.61929 20.5 10Z" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M15 19.5V17.5C15 15.567 16.567 14 18.5 14H19.5" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M8 13C4.68629 13 2 15.6863 2 19V20.5H14V19C14 15.6863 11.3137 13 8 13Z" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <Image src="/citizen.svg" alt="Citizen" width={64} height={64} />
                   </div>
                   <span className="mt-2 text-center font-semibold text-white">
-                    Citizen
+                    Login as<br/>Citizen
                   </span>
                 </Link>
               </div>
@@ -142,25 +115,7 @@ export default function HomePage() {
           <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6">
             <div className="flex flex-col items-center gap-2">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 22v-5" />
-                  <path d="M9 17H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4" />
-                  <path d="M12 17h.01" />
-                  <path d="M17 17h-2.5" />
-                  <path d="M17 13h-5" />
-                  <path d="M7 13H5" />
-                  <path d="M7 9H5" />
-                </svg>
+                <Image src="/departments.svg" alt="Departments" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">86</div>
               <div className="text-sm font-medium text-white/80">
@@ -234,20 +189,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
               <Link href="#" className="flex items-center gap-2" prefetch={false}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-8 w-8 text-white"
-                >
-                  <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-                </svg>
+                 <Image src="/footer-logo.svg" alt="GovConnect Logo" width={24} height={24} className="h-8 w-8" />
                 <div className="text-white">
                   <div className="text-xl font-bold">GovConnect</div>
                   <div className="text-sm">MANIPUR</div>

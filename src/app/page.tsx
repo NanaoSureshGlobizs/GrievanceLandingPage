@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Building, Flag, Hand, Home as HomeIcon, Siren } from "lucide-react";
+import { Building, CircleAlert, Hand, Home as HomeIcon, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { GrievanceChart } from "@/components/grievance-chart";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
       <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-sm">
@@ -116,7 +116,7 @@ export default function Home() {
                   prefetch={false}
                 >
                   <div className="relative flex h-24 w-24 items-center justify-center rounded-lg border-2 border-orange-500 bg-white/10 transition-colors group-hover:bg-white/20">
-                    <Hand className="h-12 w-12 text-white" />
+                    <Users className="h-12 w-12 text-white" />
                     <div className="absolute -bottom-10 rounded-md bg-orange-500 px-3 py-1 text-sm font-semibold text-white">
                       Vishaal Sharma
                     </div>
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
-                <Siren className="h-10 w-10 text-white" />
+                <CircleAlert className="h-10 w-10 text-white" />
               </div>
               <div className="text-4xl font-bold text-white">45,571</div>
               <div className="text-sm font-medium text-white/80">
@@ -151,7 +151,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
-                <Flag className="h-10 w-10 text-white" />
+                <Hand className="h-10 w-10 text-white" />
               </div>
               <div className="text-4xl font-bold text-white">25,869</div>
               <div className="text-sm font-medium text-white/80">

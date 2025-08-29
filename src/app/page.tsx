@@ -7,10 +7,10 @@ import { GrievanceChart } from "@/components/grievance-chart";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
-      <header className="sticky top-0 z-50 w-full">
+      <header className="w-full absolute top-0 z-50">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <Image src="/image/logo.svg" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
+            <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
             <div className="text-white">
               <div className="text-xl font-bold">GovConnect</div>
               <div className="text-sm">MANIPUR</div>
@@ -89,7 +89,7 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <Image src="/image/department-user.svg" alt="Department User" width={64} height={64} />
+                    <Image src="/image/department_normal.png" alt="Department User" width={64} height={64} />
                   </div>
                   <span className="text-center font-semibold text-white">
                     Login as<br/>Department
@@ -189,7 +189,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
               <Link href="#" className="flex items-center gap-2" prefetch={false}>
-                 <Image src="/image/footer-logo.svg" alt="GovConnect Logo" width={24} height={24} className="h-8 w-8" />
+                 <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={24} height={24} className="h-8 w-8" />
                 <div className="text-white">
                   <div className="text-xl font-bold">GovConnect</div>
                   <div className="text-sm">MANIPUR</div>

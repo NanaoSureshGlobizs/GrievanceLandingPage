@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Building, Flag, Hand, Home as HomeIcon, Siren } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { GrievanceChart } from "@/components/grievance-chart";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+    <div className="flex flex-col min-h-screen bg-[#111827] text-white">
+      <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-sm">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -17,38 +22,253 @@ export default function Home() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="h-6 w-6"
+              className="h-8 w-8 text-white"
             >
               <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
             </svg>
-            <span className="font-semibold">Public Services</span>
+            <div className="text-white">
+              <div className="text-xl font-bold">GovConnect</div>
+              <div className="text-sm">MANIPUR</div>
+            </div>
           </Link>
+          <nav className="hidden items-center gap-6 md:flex">
+            <Link
+              href="#"
+              className="text-sm font-medium text-white/80 hover:text-white"
+              prefetch={false}
+            >
+              Home
+            </Link>
+            <Link
+              href="#"
+              className="text-sm font-medium text-white/80 hover:text-white"
+              prefetch={false}
+            >
+              About Us
+            </Link>
+            <Link
+              href="#"
+              className="text-sm font-medium text-white/80 hover:text-white"
+              prefetch={false}
+            >
+              Grievance Profile
+            </Link>
+            <Link
+              href="#"
+              className="text-sm font-medium text-white/80 hover:text-white"
+              prefetch={false}
+            >
+              Track Grievance
+            </Link>
+            <Link
+              href="#"
+              className="text-sm font-medium text-white/80 hover:text-white"
+              prefetch={false}
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="#"
+              className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white"
+              prefetch={false}
+            >
+              Reports
+            </Link>
+          </nav>
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Your Portal to Public Services
+        <section className="relative w-full py-24 md:py-32 lg:py-40 xl:py-48">
+          <Image
+            src="https://picsum.photos/1920/1080"
+            alt="Background"
+            data-ai-hint="Manipur landscape"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="container relative px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-8 text-center">
+              <div className="space-y-4">
+                <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl/none">
+                  Integrated Public Grievance Redressal System
                 </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Access government services efficiently and effectively. Choose your role to get started.
-                </p>
               </div>
-              <div className="space-x-4">
-                <Button asChild>
-                  <Link href="#">Login as Department</Link>
-                </Button>
-                <Button asChild>
-                  <Link href="#">Login as Citizen</Link>
-                </Button>
+              <Button className="bg-white text-black hover:bg-white/90">
+                TRACK GRIEVANCE
+              </Button>
+              <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:gap-4">
+                <Link
+                  href="#"
+                  className="group flex flex-col items-center gap-2"
+                  prefetch={false}
+                >
+                  <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-orange-500 bg-white/10 transition-colors group-hover:bg-white/20">
+                    <Building className="h-12 w-12 text-white" />
+                  </div>
+                  <span className="font-semibold text-orange-500">
+                    Department User
+                  </span>
+                </Link>
+                <Link
+                  href="#"
+                  className="group flex flex-col items-center gap-2"
+                  prefetch={false}
+                >
+                  <div className="relative flex h-24 w-24 items-center justify-center rounded-lg border-2 border-orange-500 bg-white/10 transition-colors group-hover:bg-white/20">
+                    <Hand className="h-12 w-12 text-white" />
+                    <div className="absolute -bottom-10 rounded-md bg-orange-500 px-3 py-1 text-sm font-semibold text-white">
+                      Vishaal Sharma
+                    </div>
+                  </div>
+                  <span className="mt-8 font-semibold text-orange-500">
+                    Citizen
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
         </section>
+        <section className="w-full bg-blue-700 py-12 md:py-20">
+          <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6">
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+                <Building className="h-10 w-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-white">86</div>
+              <div className="text-sm font-medium text-white/80">
+                DEPARTMENTS
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+                <Siren className="h-10 w-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-white">45,571</div>
+              <div className="text-sm font-medium text-white/80">
+                GRIEVANCE LODGED
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+                <Flag className="h-10 w-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-white">25,869</div>
+              <div className="text-sm font-medium text-white/80">
+                GRIEVANCE REDRESSED
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+                <HomeIcon className="h-10 w-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-white">258</div>
+              <div className="text-sm font-medium text-white/80">
+                OPEN GRIEVANCE
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full bg-white py-20 text-gray-800 md:py-28">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mx-auto max-w-3xl rounded-lg bg-gray-50 p-8 shadow-lg">
+              <h2 className="mb-4 text-3xl font-bold">About Us</h2>
+              <h3 className="mb-4 text-xl font-semibold text-gray-600">
+                Empowering Every Citizen, Strengthening Every Voice
+              </h3>
+              <p className="text-gray-600">
+                To build a transparent, accountable, and citizen-centric
+                governance system in Manipur that bridges the gap between the
+                government and the people. We envision a digital platform where
+                every voice matters, every grievance is addressed promptly, and
+                every initiative is accessible to all.
+              </p>
+              <p className="mt-4 text-gray-600">
+                By leveraging technology, we aim to foster trust, streamline
+                public service delivery, and create a responsive
+                administration that works hand-in-hand with the citizens for
+                the holistic development of Manipur.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full bg-[#111827] py-20 md:py-28">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="mb-12 text-center text-4xl font-bold text-white">
+              Grievance Profile
+            </h2>
+            <GrievanceChart />
+          </div>
+        </section>
       </main>
+      <footer className="w-full bg-blue-900 py-12 text-white">
+        <div className="container mx-auto grid grid-cols-1 gap-8 px-4 md:grid-cols-3 md:px-6">
+          <div>
+            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-8 w-8 text-white"
+              >
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+              </svg>
+              <div className="text-white">
+                <div className="text-xl font-bold">GovConnect</div>
+                <div className="text-sm">MANIPUR</div>
+              </div>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm text-white/70">
+              This is an initiative of the Government of Manipur, dedicated to
+              fostering transparency, accountability, and active citizen
+              participation.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold">Important Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-white/70 hover:text-white"
+                  prefetch={false}
+                >
+                  website.www.com
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-white/70 hover:text-white"
+                  prefetch={false}
+                >
+                  website.www.com
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-white/70 hover:text-white"
+                  prefetch={false}
+                >
+                  website.www.com
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold">Contact</h3>
+            <p className="text-sm text-white/70">website.www.com</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

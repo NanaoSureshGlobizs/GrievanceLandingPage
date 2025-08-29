@@ -79,18 +79,6 @@ export default function HomePage() {
               </Link> */}
               <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
               <Link
-    href="https://grievancestaging.globizsapp.com/app/#/login"
-    className="group flex flex-col items-center gap-2"
-    prefetch={false}
-  >
-    <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-      <Image src="/image/department_login_normal.png" alt="Department User" width={96} height={96} />
-    </div>
-    <span className="text-center font-semibold text-white">
-      Login as<br/>Department
-    </span>
-  </Link>
-  <Link
     href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
     className="group flex flex-col items-center gap-2"
     prefetch={false}
@@ -102,6 +90,19 @@ export default function HomePage() {
       Login as<br/>Citizen
     </span>
   </Link>
+              <Link
+    href="https://grievancestaging.globizsapp.com/app/#/login"
+    className="group flex flex-col items-center gap-2"
+    prefetch={false}
+  >
+    <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
+      <Image src="/image/department_login_normal.png" alt="Department User" width={96} height={96} />
+    </div>
+    <span className="text-center font-semibold text-white">
+      Login as<br/>Department
+    </span>
+</Link>
+
 </div>
             </div>
           </div>
@@ -261,9 +262,9 @@ export default function HomePage() {
                 Terms of Service
               </Link>
             </div>
-            <div className="mt-4 md:mt-0">
+            {/* <div className="mt-4 md:mt-0">
               <p>Powered By Globizs Web Solution Pvt. Ltd.</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

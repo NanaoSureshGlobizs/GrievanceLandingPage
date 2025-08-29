@@ -16,7 +16,7 @@ export default function HomePage() {
               <div className="text-sm">MANIPUR</div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-1 rounded-full bg-blue-600/80 px-4 py-2 md:flex">
+          <nav className="hidden items-center gap-1 rounded-full bg-transparent px-4 py-2 md:flex">
             <Link
               href="#home"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
@@ -72,8 +72,8 @@ export default function HomePage() {
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/60" />
-          <div className="container relative px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-8 text-center">
+          <div className="container relative mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl/none">
                   Integrated Public Grievance Redressal System
@@ -88,8 +88,8 @@ export default function HomePage() {
                   className="group flex flex-col items-center gap-2"
                   prefetch={false}
                 >
-                  <div className="flex h-24 w-24 items-center justify-center rounded-lg bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <Image src="/image/department_normal.png" alt="Department User" width={64} height={64} />
+                  <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
+                    <Image src="/image/department_normal.png" alt="Department User" width={96} height={96} />
                   </div>
                   <span className="text-center font-semibold text-white">
                     Login as<br/>Department
@@ -100,8 +100,8 @@ export default function HomePage() {
                   className="group flex flex-col items-center gap-2"
                   prefetch={false}
                 >
-                  <div className="flex h-24 w-24 items-center justify-center rounded-lg bg-white/10 p-4 transition-colors group-hover:bg-white/20">
-                    <Image src="/image/citizen.svg" alt="Citizen" width={64} height={64} />
+                  <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
+                    <Image src="/image/citizen.svg" alt="Citizen" width={96} height={96} />
                   </div>
                   <span className="mt-2 text-center font-semibold text-white">
                     Login as<br/>Citizen
@@ -112,7 +112,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="w-full bg-blue-700 py-12 md:py-20">
-          <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-center">
+          <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center">
             <div className="flex flex-col items-center gap-2">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
                 <Image src="/image/departments.svg" alt="Departments" width={40} height={40} />

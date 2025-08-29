@@ -7,7 +7,7 @@ import { GrievanceChart } from "@/components/grievance-chart";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
-      <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 w-full backdrop-blur-sm">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <Image src="/image/logo.svg" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />

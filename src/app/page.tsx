@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { CircleAlert, Hand, HomeIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { GrievanceChart } from "@/components/grievance-chart";
@@ -89,7 +88,7 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-                    <Image src="/image/department_normal.png" alt="Department User" width={96} height={96} />
+                    <Image src="/image/department_login_normal.png" alt="Department User" width={96} height={96} />
                   </div>
                   <span className="text-center font-semibold text-white">
                     Login as<br/>Department
@@ -101,7 +100,7 @@ export default function HomePage() {
                   prefetch={false}
                 >
                   <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-                    <Image src="/image/citizen.svg" alt="Citizen" width={96} height={96} />
+                    <Image src="/image/citizen_login_normal.png" alt="Citizen" width={96} height={96} />
                   </div>
                   <span className="mt-2 text-center font-semibold text-white">
                     Login as<br/>Citizen
@@ -114,39 +113,39 @@ export default function HomePage() {
         <section className="w-full bg-blue-700 py-12 md:py-20">
           <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center">
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
-                <Image src="/image/departments.svg" alt="Departments" width={40} height={40} />
+              <div className="flex h-20 w-20 items-center justify-center">
+                <Image src="/image/department_normal.png" alt="Departments" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">86</div>
               <div className="text-sm font-medium text-white/80">
-                DEPARTMENTS
+                <Image src="/image/departments.png" alt="Departments" width={100} height={16} />
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
-                <CircleAlert className="h-10 w-10 text-white" />
+              <div className="flex h-20 w-20 items-center justify-center">
+                <Image src="/image/grievance_lodged_normal.png" alt="Grievance Lodged" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">45,571</div>
               <div className="text-sm font-medium text-white/80">
-                GRIEVANCE LODGED
+                <Image src="/image/grievance_lodged.png" alt="Grievance Lodged" width={120} height={16} />
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
-                <Hand className="h-10 w-10 text-white" />
+              <div className="flex h-20 w-20 items-center justify-center">
+                <Image src="/image/grievance_redressed_normal.png" alt="Grievance Redressed" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">25,869</div>
               <div className="text-sm font-medium text-white/80">
-                GRIEVANCE REDRESSED
+                <Image src="/image/grievance_redressed.png" alt="Grievance Redressed" width={140} height={16} />
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
-                <HomeIcon className="h-10 w-10 text-white" />
+              <div className="flex h-20 w-20 items-center justify-center">
+                <Image src="/image/open_grievance_normal.png" alt="Open Grievance" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">258</div>
               <div className="text-sm font-medium text-white/80">
-                OPEN GRIEVANCE
+                <Image src="/image/open_grievance.png" alt="Open Grievance" width={120} height={16} />
               </div>
             </div>
           </div>

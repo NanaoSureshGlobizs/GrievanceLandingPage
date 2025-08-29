@@ -7,7 +7,7 @@ import { GrievanceChart } from "@/components/grievance-chart";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
-      <header className="absolute w-full top-0 z-50">
+      <header className="absolute w-full top-0 z-50 bg-transparent">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={32} height={32} className="h-8 w-8" />
@@ -114,7 +114,7 @@ export default function HomePage() {
         <section className="w-full bg-blue-700 py-12 md:py-20">
           <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center">
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
                 <Image src="/image/departments.svg" alt="Departments" width={40} height={40} />
               </div>
               <div className="text-4xl font-bold text-white">86</div>
@@ -123,7 +123,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
                 <CircleAlert className="h-10 w-10 text-white" />
               </div>
               <div className="text-4xl font-bold text-white">45,571</div>
@@ -132,7 +132,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
                 <Hand className="h-10 w-10 text-white" />
               </div>
               <div className="text-4xl font-bold text-white">25,869</div>
@@ -141,7 +141,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600">
                 <HomeIcon className="h-10 w-10 text-white" />
               </div>
               <div className="text-4xl font-bold text-white">258</div>

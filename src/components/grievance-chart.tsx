@@ -1,67 +1,54 @@
 "use client"
 
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { Progress } from "@/components/ui/progress"
 
 const data = [
     { name: "BISHNUPUR", value: 92.63, color: "#2563eb" },
-    { name: "CHANDEL", value: 61.62, color: "#2563eb" },
+    { name: "CHANDEL", value: 61.62, color: "#16a34a" },
     { name: "CHURACHANDPUR", value: 75.43, color: "#2563eb" },
     { name: "IMPHAL EAST", value: 97.81, color: "#16a34a" },
     { name: "IMPHAL WEST", value: 89.63, color: "#2563eb" },
-    { name: "JIRIBAM", value: 73.46, color: "#2563eb" },
-    { name: "KAKCHING", value: 40.69, color: "#ef4444" },
-    { name: "KANGPOKPI", value: 55.63, color: "#ef4444" },
-    { name: "NONEY", value: 45.63, color: "#ef4444" },
-    { name: "PHERZAWL", value: 39.13, color: "#ef4444" },
-    { name: "SENAPATI", value: 53.73, color: "#ef4444" },
-    { name: "TAMENGLONG", value: 42.53, color: "#ef4444" },
-    { name: "TENGNOUPAL", value: 22.63, color: "#ef4444" },
-    { name: "THOUBAL", value: 54.33, color: "#ef4444" },
-    { name: "UKHRUL", value: 47.71, color: "#ef4444" },
-]
+    { name: "JIRIBAM", value: 73.40, color: "#2563eb" },
+    { name: "KAKCHING", value: 40.69, color: "#2563eb" },
+    { name: "KAMJONG", value: 58.63, color: "#16a34a" },
+    { name: "KANGPOKPI", value: 55.63, color: "#16a34a" },
+    { name: "NONEY", value: 45.63, color: "#16a34a" },
+    { name: "PHERZAWL", value: 39.13, color: "#2563eb" },
+    { name: "SENAPATI", value: 53.73, color: "#16a34a" },
+    { name: "TAMENGLONG", value: 42.53, color: "#2563eb" },
+    { name: "TENGNOUPAL", value: 22.63, color: "#2563eb" },
+    { name: "THOUBAL", value: 54.33, color: "#2563eb" },
+    { name: "UKHRUL", value: 47.71, color: "#16a34a" },
+].sort((a, b) => a.name.localeCompare(b.name));
 
-const CustomYAxisTick = (props: any) => {
-    const { x, y, payload } = props;
-    return (
-        <g transform={`translate(${x},${y})`}>
-            <text x={0} y={0} dy={5} textAnchor="end" fill="#fff" fontSize={12}>
-                {payload.value}
-            </text>
-        </g>
-    );
-};
+const GrievanceItem = ({ name, value, color }: { name: string, value: number, color: string }) => (
+    <div className="flex items-center gap-4">
+        <div className="w-32 shrink-0 text-sm font-medium text-gray-400">{name}</div>
+        <div className="flex-1">
+            <Progress value={value} className="h-2 bg-gray-700" indicatorClassName={color === '#16a34a' ? 'bg-green-500' : 'bg-blue-500'} />
+        </div>
+        <div className="w-16 text-right text-sm font-semibold">{value.toFixed(2)}%</div>
+    </div>
+);
 
-const CustomXAxisTick = (props: any) => {
-    const { x, y, payload, data } = props;
-    const item = data.find((d: any) => d.name === payload.value);
-    return (
-        <g transform={`translate(${x},${y})`}>
-            <text x={0} y={0} dy={16} textAnchor="end" fill="#fff" fontSize={12} transform="rotate(-35)">
-                {`${item.value}%`}
-            </text>
-        </g>
-    );
-};
 
 export function GrievanceChart() {
+    const half = Math.ceil(data.length / 2);
+    const firstHalf = data.slice(0, half);
+    const secondHalf = data.slice(half);
+
     return (
-        <ResponsiveContainer width="100%" height={500}>
-            <BarChart data={data} layout="vertical" margin={{ left: 10, right: 30, top: 20, bottom: 20 }}>
-                <XAxis type="number" hide />
-                <YAxis
-                    dataKey="name"
-                    type="category"
-                    axisLine={false}
-                    tickLine={false}
-                    tick={<CustomYAxisTick />}
-                    width={100}
-                />
-                <Bar dataKey="value" barSize={15} radius={[0, 10, 10, 0]}>
-                    {data.map((entry, index) => (
-                        <rect key={`cell-${index}`} x={0} y={0} width={entry.value} height={15} fill={entry.color} />
-                    ))}
-                </Bar>
-            </BarChart>
-        </ResponsiveContainer>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4">
+            <div className="flex flex-col gap-4">
+                {firstHalf.map(item => (
+                    <GrievanceItem key={item.name} {...item} />
+                ))}
+            </div>
+            <div className="flex flex-col gap-4">
+                {secondHalf.map(item => (
+                    <GrievanceItem key={item.name} {...item} />
+                ))}
+            </div>
+        </div>
     )
 }

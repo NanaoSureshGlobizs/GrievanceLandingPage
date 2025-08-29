@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Building, CircleAlert, Hand, Home as HomeIcon, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -202,70 +200,89 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <footer className="w-full bg-blue-900 py-12 text-white">
-        <div className="container mx-auto grid grid-cols-1 gap-8 px-4 md:grid-cols-3 md:px-6">
-          <div>
-            <Link href="#" className="flex items-center gap-2" prefetch={false}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-8 w-8 text-white"
-              >
-                <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-              </svg>
-              <div className="text-white">
-                <div className="text-xl font-bold">GovConnect</div>
-                <div className="text-sm">MANIPUR</div>
-              </div>
-            </Link>
-            <p className="mt-4 max-w-xs text-sm text-white/70">
-              This is an initiative of the Government of Manipur, dedicated to
-              fostering transparency, accountability, and active citizen
-              participation.
-            </p>
+      <footer className="w-full bg-blue-900 text-white">
+        <div className="container mx-auto px-4 py-12 md:px-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div>
+              <Link href="#" className="flex items-center gap-2" prefetch={false}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-8 w-8 text-white"
+                >
+                  <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                </svg>
+                <div className="text-white">
+                  <div className="text-xl font-bold">GovConnect</div>
+                  <div className="text-sm">MANIPUR</div>
+                </div>
+              </Link>
+              <p className="mt-4 max-w-xs text-sm text-white/70">
+                This platform is an official initiative of the Government of Manipur, dedicated to
+                fostering transparency, accountability, and active citizen participation. Through
+                digital governance, we aim to provide accessible information, streamline
+                services, and strengthen the bond between the government and the people
+                of Manipur
+              </p>
+            </div>
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Important Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-white/70 hover:text-white"
+                    prefetch={false}
+                  >
+                    website.www.com
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-white/70 hover:text-white"
+                    prefetch={false}
+                  >
+                    website.www.com
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-white/70 hover:text-white"
+                    prefetch={false}
+                  >
+                    website.www.com
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Contact</h3>
+              <p className="text-sm text-white/70">Raj Bhavan, Manipur</p>
+              <p className="text-sm text-white/70">98561-98561</p>
+            </div>
           </div>
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Important Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-white/70 hover:text-white"
-                  prefetch={false}
-                >
-                  website.www.com
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-white/70 hover:text-white"
-                  prefetch={false}
-                >
-                  website.www.com
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-white/70 hover:text-white"
-                  prefetch={false}
-                >
-                  website.www.com
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Contact</h3>
-            <p className="text-sm text-white/70">website.www.com</p>
+          <div className="mt-8 border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
+            <div className="flex gap-4">
+              <p>2025 - All Right reserved</p>
+              <Link href="#" className="hover:text-white" prefetch={false}>
+                Privacy Policy
+              </Link>
+              <Link href="#" className="hover:text-white" prefetch={false}>
+                Terms of Service
+              </Link>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <p>Powered By Globizs Web Solution Pvt. Ltd.</p>
+            </div>
           </div>
         </div>
       </footer>

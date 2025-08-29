@@ -72,14 +72,14 @@ export default function HomePage() {
                 Integrated Public <br/> Grievance Redressal System
                 </h1>
               </div>
-              <Link href="/track-grievance">
+              <Link href="https://govconnectmanipur.mn.gov.in/#/citizen-login-with-case">
                 <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
                   TRACK GRIEVANCE
                 </Button>
               </Link>
               <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
               <Link
-    href="/login/department"
+    href="https://govconnectmanipur.mn.gov.in/#/login"
     className="group flex flex-col items-center gap-2"
     prefetch={false}
   >
@@ -91,7 +91,7 @@ export default function HomePage() {
     </span>
   </Link>
   <Link
-    href="/login/citizen"
+    href="https://govconnectmanipur.mn.gov.in/#/citizen-login"
     className="group flex flex-col items-center gap-2"
     prefetch={false}
   >
@@ -143,17 +143,14 @@ export default function HomePage() {
     </div>
 
     <div className="flex flex-col items-center gap-4">
-      <div className="w-24 h-24 bg-white/20 rounded-full border-4 border-white flex items-center justify-center">
-        <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-          <Image src="/image/open_normal.png" alt="Open Grievance" width={32} height={32} />
-        </div>
-      </div>
-      <div className="text-5xl font-bold text-white">258</div>
+      <Image src="/image/open_normal.png" alt="Open Grievance" width={96} height={96} />
+      <div className="text-5xl font-bold text-white">25,869</div>
       <div className="bg-white px-6 py-2 rounded-full">
         <span className="font-semibold text-gray-800 text-sm">OPEN GRIEVANCE</span>
       </div>
     </div>
 
+    
   </div>
 </section>
         <section id="about-us" className="w-full bg-white py-20 text-gray-800 md:py-28">

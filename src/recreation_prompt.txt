@@ -1,0 +1,61 @@
+Create a single-page, responsive landing page application using Next.js, React, and Tailwind CSS. The page should have a modern, dark theme and be divided into several distinct sections that a user can scroll through.
+
+**1. General Layout & Styling:**
+- The primary font for the entire application should be 'Inter'.
+- The page should feature smooth scrolling to anchor links.
+- The color scheme should be dark, primarily using shades of dark blue and gray, with white text.
+
+**2. Header Section:**
+- The header should be fixed to the top of the viewport and have a transparent background.
+- It must contain:
+    - **Logo:** On the left, display an image logo (`/image/govmanipur_logo.png`, 40x40px). Next to the logo, show the text "GovConnect" in a bold, larger font, with "MANIPUR" in a smaller font underneath it. Text color should be white.
+    - **Navigation Menu:** On the right, create a navigation bar inside a rounded container with a specific linear gradient background: `linear-gradient(90deg, #003688 0%, #1AA3D8 100%)`.
+    - **Navigation Links:** The menu should include the following links: "Home", "About Us", "Grievance Profile", "Track Grv.", and "Contact Us". These should be anchor links that scroll smoothly to the corresponding sections on the page.
+
+**3. Hero Section (ID: `home`):**
+- This section should occupy the full viewport height (`min-h-screen`).
+- Use a background image (`/image/background.png`) that covers the entire section. Apply a semi-transparent black overlay (`bg-black/60`) on top of the image to ensure text is readable.
+- Center all content vertically and horizontally.
+- The content should include:
+    - **Main Title:** A large, bold heading: "Integrated Public\nGrievance Redressal System".
+    - **Primary Button:** A "TRACK GRIEVANCE" button that links to `https://govconnectmanipur.mn.gov.in/#/citizen-login-with-case`. It should have a transparent background with a white border, and on hover, it should change to a white background with black text.
+    - **Login Options:** Below the button, display two login options side-by-side with space between them:
+        - **Department Login:** An icon (`/image/department_login_normal.png`, 96x96px) with the text "Login as Department" below it. This should link to `https://govconnectmanipur.mn.gov.in/#/login`.
+        - **Citizen Login:** An icon (`/image/citizen_login_normal.png`, 96x96px) with the text "Login as Citizen" below it. This should link to `https://govconnectmanipur.mn.gov.in/#/citizen-login`.
+
+**4. Statistics Section:**
+- This section should have a linear gradient background: `linear-gradient(94.6deg, #003688 4.28%, #1AA3D8 107.66%)`.
+- Include a decorative background image (`/image/card_background.png`) in the bottom-right corner with reduced opacity.
+- Display four statistical items horizontally, centered within the section. Each item consists of:
+    1. An icon (96x96px).
+    2. A large, bold number (text color: white).
+    3. A label inside a white, rounded container with dark text.
+- The four items are:
+    - **DEPARTMENTS:** Icon `/image/department_normal.png`, Number `86`.
+    - **GRIEVANCE LODGED:** Icon `/image/log_normal.png`, Number `45,571`.
+    - **GRIEVANCE REDRESSED:** Icon `/image/redressel_normal.png`, Number `25,869`.
+    - **OPEN GRIEVANCE:** Icon `/image/open_normal.png`, Number `25,869`.
+
+**5. About Us Section (ID: `about-us`):**
+- This section should have a white background with dark gray text.
+- The content should be inside a rounded container (Card component) with a light gray background (`bg-gray-50`), a subtle shadow, and a colored border (`#239BA7`).
+- Content includes:
+    - A main heading "About Us".
+    - A subheading "Empowering Every Citizen, Strengthening Every Voice".
+    - Two paragraphs of descriptive text about the platform's mission and vision.
+
+**6. Grievance Profile Section (ID: `grievance-profile`):**
+- This section should have a background image (`/image/profile_background.png`) with a semi-transparent black overlay (`bg-black/70`).
+- The content should be centered.
+- It must contain:
+    - A heading "Grievance Profile" in white text.
+    - A horizontal bar chart component (`GrievanceChart`). The chart should display grievance data for 16 districts, sorted alphabetically. Each row should show the district name, a progress bar representing a percentage value, and the percentage value itself. The data should be split into two columns to fit the layout.
+
+**7. Footer Section (ID: `contact-us`):**
+- The footer should have a dark blue background (`bg-blue-900`) with white text.
+- The layout should be a three-column grid on larger screens.
+    - **Column 1:** The same logo and "GovConnect MANIPUR" text as the header, followed by a brief descriptive paragraph about the platform.
+    - **Column 2:** An "Important Links" section with placeholder links.
+    - **Column 3:** A "Contact" section with a placeholder address and phone number.
+- Below the columns, there should be a horizontal separator.
+- The bottom part of the footer should contain copyright information ("2025 - All Right reserved"), links to "Privacy Policy" and "Terms of Service", and a "Powered By" credit.

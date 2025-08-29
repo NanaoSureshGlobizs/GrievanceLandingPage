@@ -69,7 +69,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl/none">
-                  Integrated Public Grievance Redressal System
+                Integrated Public <br/> Grievance Redressal System
                 </h1>
               </div>
               <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
@@ -103,54 +103,80 @@ export default function HomePage() {
 </div>
             </div>
           </div>
-        </section>
-        <section className="w-full bg-blue-700 py-12 md:py-20">
-          <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center">
-            <div className="flex flex-col items-center gap-2">
-              <Image src="/image/department_normal.png" alt="Departments" width={64} height={64} />
-              <div className="text-4xl font-bold text-white">86</div>
-              <div className="font-medium text-white/90">DEPARTMENTS</div>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Image src="/image/log_normal.png" alt="Grievance Lodged" width={64} height={64} />
-              <div className="text-4xl font-bold text-white">45,571</div>
-              <div className="font-medium text-white/90">GRIEVANCE LODGED</div>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Image src="/image/redressel_normal.png" alt="Grievance Redressed" width={64} height={64} />
-              <div className="text-4xl font-bold text-white">25,869</div>
-              <div className="font-medium text-white/90">GRIEVANCE REDRESSED</div>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Image src="/image/open_normal.png" alt="Open Grievance" width={64} height={64} />
-              <div className="text-4xl font-bold text-white">258</div>
-              <div className="font-medium text-white/90">OPEN GRIEVANCE</div>
-            </div>
-          </div>
-        </section>
+        </section><section className="w-full py-12 md:py-20 relative overflow-hidden" style={{background: 'linear-gradient(94.6deg, #003688 4.28%, #1AA3D8 107.66%)'}}>
+  {/* Background image in bottom right corner */}
+  <div className="absolute bottom-0 right-0">
+    <Image src="/image/card_background.png" alt="Background decoration" width={200} height={200} className="opacity-30" />
+  </div>
+  
+  <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center relative z-10">
+    
+    <div className="flex flex-col items-center gap-4">
+      {/* Image without any background or border */}
+      <Image src="/image/department_normal.png" alt="Departments" width={96} height={96} />
+      
+      {/* Number */}
+      <div className="text-5xl font-bold text-white">86</div>
+      
+      {/* Label in white rounded container */}
+      <div className="bg-white px-6 py-2 rounded-full">
+        <span className="font-semibold text-gray-800 text-sm">DEPARTMENTS</span>
+      </div>
+    </div>
+
+    <div className="flex flex-col items-center gap-4">
+      <Image src="/image/log_normal.png" alt="Grievance Lodged" width={96} height={96} />
+      <div className="text-5xl font-bold text-white">45,571</div>
+      <div className="bg-white px-6 py-2 rounded-full">
+        <span className="font-semibold text-gray-800 text-sm">GRIEVANCE LODGED</span>
+      </div>
+    </div>
+
+    <div className="flex flex-col items-center gap-4">
+      <Image src="/image/redressel_normal.png" alt="Grievance Redressed" width={96} height={96} />
+      <div className="text-5xl font-bold text-white">25,869</div>
+      <div className="bg-white px-6 py-2 rounded-full">
+        <span className="font-semibold text-gray-800 text-sm">GRIEVANCE REDRESSED</span>
+      </div>
+    </div>
+
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-24 h-24 bg-white/20 rounded-full border-4 border-white flex items-center justify-center">
+        <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+          <Image src="/image/open_normal.png" alt="Open Grievance" width={32} height={32} />
+        </div>
+      </div>
+      <div className="text-5xl font-bold text-white">258</div>
+      <div className="bg-white px-6 py-2 rounded-full">
+        <span className="font-semibold text-gray-800 text-sm">OPEN GRIEVANCE</span>
+      </div>
+    </div>
+
+  </div>
+</section>
         <section id="about-us" className="w-full bg-white py-20 text-gray-800 md:py-28">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="mx-auto max-w-3xl rounded-lg bg-gray-50 p-8 shadow-lg">
-              <h2 className="mb-4 text-3xl font-bold">About Us</h2>
-              <h3 className="mb-4 text-xl font-semibold text-gray-600">
-                Empowering Every Citizen, Strengthening Every Voice
-              </h3>
-              <p className="text-gray-600">
-                To build a transparent, accountable, and citizen-centric
-                governance system in Manipur that bridges the gap between the
-                government and the people. We envision a digital platform where
-                every voice matters, every grievance is addressed promptly, and
-                every initiative is accessible to all.
-              </p>
-              <p className="mt-4 text-gray-600">
-                By leveraging technology, we aim to foster trust, streamline
-                public service delivery, and create a responsive
-                administration that works hand-in-hand with the citizens for
-                the holistic development of Manipur.
-              </p>
-            </div>
-          </div>
-        </section>
+  <div className="container mx-auto px-4 md:px-6">
+    <div className="mx-auto max-w-6xl rounded-lg bg-gray-50 px-16 py-12 shadow-lg" style={{border: '1px solid #239BA7'}}>
+      <h2 className="mb-6 text-4xl font-bold">About Us</h2>
+      <h3 className="mb-6 text-2xl font-semibold text-gray-600">
+        Empowering Every Citizen, Strengthening Every Voice
+      </h3>
+      <p className="text-lg text-gray-600 mb-6">
+        To build a transparent, accountable, and citizen-centric
+        governance system in Manipur that bridges the gap between the
+        government and the people. We envision a digital platform where
+        every voice matters, every grievance is addressed promptly, and
+        every initiative is accessible to all.
+      </p>
+      <p className="text-lg text-gray-600">
+        By leveraging technology, we aim to foster trust, streamline
+        public service delivery, and create a responsive
+        administration that works hand-in-hand with the citizens for
+        the holistic development of Manipur.
+      </p>
+    </div>
+  </div>
+</section>
 
         <section id="grievance-profile" className="relative w-full py-20 md:py-28">
           <Image

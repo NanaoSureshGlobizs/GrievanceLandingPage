@@ -12,8 +12,8 @@ export default function HomePage() {
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -22,52 +22,54 @@ export default function HomePage() {
               strokeLinejoin="round"
               className="h-8 w-8 text-white"
             >
-              <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+              <path d="M12 6c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" />
+              <path d="M15 9l-3 3-3-3" />
             </svg>
             <div className="text-white">
               <div className="text-xl font-bold">GovConnect</div>
               <div className="text-sm">MANIPUR</div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-1 rounded-full bg-blue-600/80 px-4 py-2 md:flex">
             <Link
               href="#home"
-              className="text-sm font-medium text-white/80 hover:text-white"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
               Home
             </Link>
             <Link
               href="#about-us"
-              className="text-sm font-medium text-white/80 hover:text-white"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
               About Us
             </Link>
             <Link
               href="#grievance-profile"
-              className="text-sm font-medium text-white/80 hover:text-white"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
               Grievance Profile
             </Link>
             <Link
               href="#home"
-              className="text-sm font-medium text-white/80 hover:text-white"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
-              Track Grievance
+              Track Grv.
             </Link>
             <Link
               href="#contact-us"
-              className="text-sm font-medium text-white/80 hover:text-white"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
               Contact Us
             </Link>
             <Link
               href="#"
-              className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white"
+              className="rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-white"
               prefetch={false}
             >
               Reports
@@ -92,7 +94,7 @@ export default function HomePage() {
                   Integrated Public Grievance Redressal System
                 </h1>
               </div>
-              <Button className="rounded-lg border-2 border-white bg-white text-black hover:bg-white/90">
+              <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
                 TRACK GRIEVANCE
               </Button>
               <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:gap-4">

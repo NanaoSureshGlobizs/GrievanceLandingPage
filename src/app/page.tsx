@@ -88,7 +88,7 @@ export default function HomePage() {
                   className="group flex flex-col items-center gap-2"
                   prefetch={false}
                 >
-                  <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
+                  <div className="flex h-24 w-24 items-center justify-center rounded-lg bg-white/10 p-4 transition-colors group-hover:bg-white/20">
                     <Image src="/image/department_normal.png" alt="Department User" width={64} height={64} />
                   </div>
                   <span className="text-center font-semibold text-white">
@@ -100,7 +100,7 @@ export default function HomePage() {
                   className="group flex flex-col items-center gap-2"
                   prefetch={false}
                 >
-                  <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-white bg-white/10 p-4 transition-colors group-hover:bg-white/20">
+                  <div className="flex h-24 w-24 items-center justify-center rounded-lg bg-white/10 p-4 transition-colors group-hover:bg-white/20">
                     <Image src="/image/citizen.svg" alt="Citizen" width={64} height={64} />
                   </div>
                   <span className="mt-2 text-center font-semibold text-white">
@@ -112,7 +112,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="w-full bg-blue-700 py-12 md:py-20">
-          <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6">
+          <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-center">
             <div className="flex flex-col items-center gap-2">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-blue-600">
                 <Image src="/image/departments.svg" alt="Departments" width={40} height={40} />

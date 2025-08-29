@@ -16,7 +16,7 @@ export default function HomePage() {
               <div className="text-sm">MANIPUR</div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-1 rounded-full bg-transparent px-4 py-2 md:flex">
+          <nav className="hidden items-center gap-1 rounded-full bg-black/50 backdrop-blur-sm px-4 py-2 md:flex">
             <Link
               href="#home"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"

@@ -345,6 +345,24 @@ export default async function HomePage() {
                     Official Login
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="https://manipur.gov.in/"
+                    className="text-sm text-white/70 hover:text-white"
+                    prefetch={false}
+                  >
+                    https://manipur.gov.in/
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://ditmanipur.gov.in/"
+                    className="text-sm text-white/70 hover:text-white"
+                    prefetch={false}
+                  >
+                    https://ditmanipur.gov.in/
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -356,10 +374,10 @@ export default async function HomePage() {
           <div className="mt-8 border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
             <div className="flex gap-4">
               <p>2025 - All Right reserved</p>
-              <Link href="#" className="hover:text-white" prefetch={false}>
+              <Link href="/privacy-policy" className="hover:text-white" prefetch={false}>
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-white" prefetch={false}>
+              <Link href="/terms-of-service" className="hover:text-white" prefetch={false}>
                 Terms of Service
               </Link>
             </div>

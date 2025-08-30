@@ -3,13 +3,46 @@ import Image from "next/image";
 import Link from "next/link";
 import { GrievanceChart } from "@/components/grievance-chart";
 
-export default function HomePage() {
+async function getSummaryData() {
+  try {
+    const res = await fetch('https://grievanceapistaging.globizsapp.com/api/landing/summary', { next: { revalidate: 3600 } });
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const xmlText = await res.text();
+    
+    const parseValue = (tag: string) => {
+      const match = xmlText.match(new RegExp(`<${tag}>(.*?)</${tag}>`));
+      return match ? match[1] : 'N/A';
+    };
+
+    return {
+      departments: parseValue('departments'),
+      total: parseValue('total'),
+      redressed: parseValue('redressed'),
+      open: parseValue('open'),
+    };
+  } catch (error) {
+    console.error(error);
+    // Return default values in case of an error
+    return {
+      departments: "86",
+      total: "45,571",
+      redressed: "25,869",
+      open: "25,869",
+    };
+  }
+}
+
+export default async function HomePage() {
+  const summary = await getSummaryData();
+
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
       <header className="absolute w-full top-0 z-50 bg-transparent">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={40} height={40} className="h-10 w-10" />
+            <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={50} height={50} className="h-12 w-12" />
             <div className="text-white">
               <div className="text-xl font-bold">GovConnect</div>
               <div className="text-sm">MANIPUR</div>
@@ -72,11 +105,11 @@ export default function HomePage() {
                 Integrated Public <br/> Grievance Redressal System
                 </h1>
               </div>
-              {/* <Link href="https://grievancestaging.globizsapp.com/app/#/citizen-login-with-case">
+              <Link href="https://grievancestaging.globizsapp.com/app/#/citizen-login-with-case">
                 <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
                   TRACK GRIEVANCE
                 </Button>
-              </Link> */}
+              </Link>
               <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
               <Link
     href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
@@ -119,7 +152,7 @@ export default function HomePage() {
       <Image src="/image/department_normal.png" alt="Departments" width={96} height={96} />
       
       {/* Number */}
-      <div className="text-5xl font-bold text-white">86</div>
+      <div className="text-5xl font-bold text-white">{summary.departments}</div>
       
       {/* Label in white rounded container */}
       <div className="bg-white px-6 py-2 rounded-full">
@@ -129,7 +162,7 @@ export default function HomePage() {
 
     <div className="flex flex-col items-center gap-4">
       <Image src="/image/log_normal.png" alt="Grievance Lodged" width={96} height={96} />
-      <div className="text-5xl font-bold text-white">45,571</div>
+      <div className="text-5xl font-bold text-white">{summary.total}</div>
       <div className="bg-white px-6 py-2 rounded-full">
         <span className="font-semibold text-gray-800 text-sm">GRIEVANCE LODGED</span>
       </div>
@@ -137,7 +170,7 @@ export default function HomePage() {
 
     <div className="flex flex-col items-center gap-4">
       <Image src="/image/redressel_normal.png" alt="Grievance Redressed" width={96} height={96} />
-      <div className="text-5xl font-bold text-white">25,869</div>
+      <div className="text-5xl font-bold text-white">{summary.redressed}</div>
       <div className="bg-white px-6 py-2 rounded-full">
         <span className="font-semibold text-gray-800 text-sm">GRIEVANCE REDRESSED</span>
       </div>
@@ -145,7 +178,7 @@ export default function HomePage() {
 
     <div className="flex flex-col items-center gap-4">
       <Image src="/image/open_normal.png" alt="Open Grievance" width={96} height={96} />
-      <div className="text-5xl font-bold text-white">25,869</div>
+      <div className="text-5xl font-bold text-white">{summary.open}</div>
       <div className="bg-white px-6 py-2 rounded-full">
         <span className="font-semibold text-gray-800 text-sm">OPEN GRIEVANCE</span>
       </div>
@@ -154,6 +187,23 @@ export default function HomePage() {
     
   </div>
 </section>
+        
+        <section id="grievance-profile" className="relative w-full py-20 md:py-28">
+          <Image
+            src="/image/profile_background.png"
+            alt="Grievance Profile Background"
+            data-ai-hint="abstract geometric pattern"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="container relative mx-auto px-4 md:px-6">
+            <h2 className="mb-12 text-center text-4xl font-bold text-white">
+              Grievance Profile
+            </h2>
+            <GrievanceChart />
+          </div>
+        </section>
         <section id="about-us" className="w-full bg-white py-20 text-gray-800 md:py-28">
   <div className="container mx-auto px-4 md:px-6">
     <div className="mx-auto max-w-6xl rounded-lg bg-gray-50 px-16 py-12 shadow-lg" style={{border: '1px solid #239BA7'}}>
@@ -177,30 +227,13 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
-        <section id="grievance-profile" className="relative w-full py-20 md:py-28">
-          <Image
-            src="/image/profile_background.png"
-            alt="Grievance Profile Background"
-            data-ai-hint="abstract geometric pattern"
-            fill
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/70" />
-          <div className="container relative mx-auto px-4 md:px-6">
-            <h2 className="mb-12 text-center text-4xl font-bold text-white">
-              Grievance Profile
-            </h2>
-            <GrievanceChart />
-          </div>
-        </section>
       </main>
       <footer id="contact-us" className="w-full bg-blue-900 text-white">
         <div className="container mx-auto px-4 py-12 md:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
               <Link href="#" className="flex items-center gap-2" prefetch={false}>
-                 <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={40} height={40} className="h-10 w-10" />
+                 <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={50} height={50} className="h-12 w-12" />
                 <div className="text-white">
                   <div className="text-xl font-bold">GovConnect</div>
                   <div className="text-sm">MANIPUR</div>
@@ -271,3 +304,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    

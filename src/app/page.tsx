@@ -189,7 +189,13 @@ export default async function HomePage() {
         </section>
         
         <section className="w-full py-12 md:py-20 relative overflow-hidden" style={{background: 'linear-gradient(94.6deg, #003688 4.28%, #1AA3D8 107.66%)'}}>
-  {/* Background image in bottom right corner */}
+        {summary.error && (
+          <div className="container mx-auto px-4 text-center mb-4">
+            <div className="bg-red-500/20 border border-red-500 text-white p-4 rounded-md">
+              <p>Error fetching data: {summary.error}</p>
+            </div>
+          </div>
+        )}
   <div className="absolute bottom-0 right-0">
     <Image src="/image/card_background.png" alt="Background decoration" width={200} height={200} className="opacity-30" />
   </div>
@@ -323,29 +329,20 @@ export default async function HomePage() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
-                    website.www.com
+                    Citizen Login
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="https://grievancestaging.globizsapp.com/app/#/official-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
-                    website.www.com
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/70 hover:text-white"
-                    prefetch={false}
-                  >
-                    website.www.com
+                    Official Login
                   </Link>
                 </li>
               </ul>

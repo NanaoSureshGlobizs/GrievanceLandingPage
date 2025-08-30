@@ -367,7 +367,7 @@ export default async function HomePage() {
             </div>
             <div>
               <h3 className="mb-4 text-lg font-semibold">Contact</h3>
-              <p className="text-sm text-white/70">Raj Bhavan Road, Imphal, Manipur 795001</p>
+              <p className="text-sm text-white/70">Raj Bhavan , Kangla, Imphal, Manipur 795001</p>
               <p className="text-sm text-white/70">98561-98561</p>
             </div>
           </div>

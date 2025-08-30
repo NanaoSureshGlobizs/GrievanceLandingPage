@@ -152,38 +152,34 @@ export default async function HomePage() {
                 Integrated Public <br/> Grievance Redressal System
                 </h1>
               </div>
-              <Link href="https://grievancestaging.globizsapp.com/app/#/citizen-login-with-case">
-                <Button className="rounded-md border-2 border-white bg-transparent px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-black">
-                  TRACK GRIEVANCE
-                </Button>
+              
+              <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-between sm:gap-24">
+              <Link
+                href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
+                className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
+                prefetch={false}
+              >
+                <div className="flex h-32 w-32 items-center justify-center rounded-lg">
+                  <Image src="/image/citizen_login_normal.png" alt="Citizen" width={128} height={128} />
+                </div>
+                <span className="text-center text-lg font-semibold text-white">
+                  Login as<br/>Citizen
+                </span>
               </Link>
-              <div className="flex flex-col items-center gap-6 pt-8 sm:flex-row sm:justify-between sm:gap-20">
               <Link
-    href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
-    className="group flex flex-col items-center gap-2"
-    prefetch={false}
-  >
-    <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-      <Image src="/image/citizen_login_normal.png" alt="Citizen" width={96} height={96} />
-    </div>
-    <span className="text-center font-semibold text-white">
-      Login as<br/>Citizen
-    </span>
-  </Link>
-              <Link
-    href="https://grievancestaging.globizsapp.com/app/#/login"
-    className="group flex flex-col items-center gap-2"
-    prefetch={false}
-  >
-    <div className="flex h-24 w-24 items-center justify-center rounded-lg transition-colors">
-      <Image src="/image/department_login_normal.png" alt="Department User" width={96} height={96} />
-    </div>
-    <span className="text-center font-semibold text-white">
-      Login as<br/>Department
-    </span>
-</Link>
+                href="https://grievancestaging.globizsapp.com/app/#/login"
+                className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
+                prefetch={false}
+              >
+                <div className="flex h-32 w-32 items-center justify-center rounded-lg">
+                  <Image src="/image/department_login_normal.png" alt="Department User" width={128} height={128} />
+                </div>
+                <span className="text-center text-lg font-semibold text-white">
+                  Login as<br/>Department
+                </span>
+            </Link>
 
-</div>
+            </div>
             </div>
           </div>
         </section>

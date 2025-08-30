@@ -259,14 +259,14 @@ export default async function HomePage() {
             <h2 className="mb-16 text-center text-4xl font-bold" style={{ color: '#2E5266' }}>
               Main Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
+                <div key={index} className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl">
                   <Image src={feature.image} alt={feature.title} width={80} height={80} data-ai-hint={feature.hint} />
-                  <h3 className="mt-6 mb-2 text-xl font-bold whitespace-pre-line" style={{ color: feature.color }}>
+                  <h3 className="mt-6 mb-3 text-xl font-bold whitespace-pre-line" style={{ color: feature.color }}>
                     {feature.title}
                   </h3>
-                  <p className="max-w-xs text-gray-600">
+                  <p className="text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

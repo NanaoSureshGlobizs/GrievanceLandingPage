@@ -110,13 +110,13 @@ export default async function HomePage() {
             >
               About Us
             </Link>
-            <Link
+            {/* <Link
               href="#grievance-profile"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
               Grievance Profile
-            </Link>
+            </Link> */}
             <Link
               href="#home"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
@@ -237,7 +237,7 @@ export default async function HomePage() {
   </div>
 </section>
         
-        <section id="grievance-profile" className="relative w-full py-20 md:py-28">
+        {/* <section id="grievance-profile" className="relative w-full py-20 md:py-28">
           <Image
             src="/image/profile_background.png"
             alt="Grievance Profile Background"
@@ -252,7 +252,7 @@ export default async function HomePage() {
             </h2>
             <GrievanceChart />
           </div>
-        </section>
+        </section> */}
 
         <section id="features" className="w-full py-20 md:py-28 bg-gray-50 text-gray-800">
           <div className="container mx-auto px-4 md:px-6">

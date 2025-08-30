@@ -198,20 +198,17 @@ export default async function HomePage() {
   
   <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4 md:px-6 justify-items-center relative z-10">
     
-    <div className="flex flex-col items-center gap-4">
-      {/* Image without any background or border */}
+    <div className="flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110">
       <Image src="/image/department_normal.png" alt="Departments" width={96} height={96} />
       
-      {/* Number */}
       <div className="text-5xl font-bold text-white">{summary.departments}</div>
       
-      {/* Label in white rounded container */}
       <div className="bg-white px-6 py-2 rounded-full">
         <span className="font-semibold text-gray-800 text-sm">DEPARTMENTS</span>
       </div>
     </div>
 
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110">
       <Image src="/image/log_normal.png" alt="Grievance Lodged" width={96} height={96} />
       <div className="text-5xl font-bold text-white">{summary.total}</div>
       <div className="bg-white px-6 py-2 rounded-full">
@@ -219,7 +216,7 @@ export default async function HomePage() {
       </div>
     </div>
 
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110">
       <Image src="/image/redressel_normal.png" alt="Grievance Redressed" width={96} height={96} />
       <div className="text-5xl font-bold text-white">{summary.redressed}</div>
       <div className="bg-white px-6 py-2 rounded-full">
@@ -227,7 +224,7 @@ export default async function HomePage() {
       </div>
     </div>
 
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110">
       <Image src="/image/open_normal.png" alt="Open Grievance" width={96} height={96} />
       <div className="text-5xl font-bold text-white">{summary.open}</div>
       <div className="bg-white px-6 py-2 rounded-full">
@@ -263,7 +260,7 @@ export default async function HomePage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
               {features.map((feature, index) => (
-                <div key={index} className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl">
+                <div key={index} className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105">
                   <Image src={feature.image} alt={feature.title} width={80} height={80} data-ai-hint={feature.hint} />
                   <h3 className="mt-6 mb-3 text-xl font-bold whitespace-pre-line" style={{ color: feature.color }}>
                     {feature.title}

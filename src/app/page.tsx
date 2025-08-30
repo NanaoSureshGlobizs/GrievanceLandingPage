@@ -110,13 +110,13 @@ export default async function HomePage() {
             >
               About Us
             </Link>
-            {/* <Link
-              href="#grievance-profile"
+            <Link
+              href="#features"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
             >
-              Grievance Profile
-            </Link> */}
+              Main Features
+            </Link>
             <Link
               href="#home"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"

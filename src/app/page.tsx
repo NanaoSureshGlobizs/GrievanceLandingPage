@@ -11,7 +11,8 @@ async function getSummaryData() {
       throw new Error(`Failed to fetch data: ${res.status}`);
     }
 
-    const data = await res.json();
+    const responseData = await res.json();
+    const data = responseData.data;
 
     return {
       departments: data.departments?.toString() || 'N/A',
@@ -306,3 +307,5 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    

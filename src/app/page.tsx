@@ -6,33 +6,34 @@ import { GrievanceChart } from "@/components/grievance-chart";
 async function getSummaryData() {
   try {
     const res = await fetch('https://grievanceapistaging.globizsapp.com/api/landing/summary', { next: { revalidate: 3600 } });
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    const xmlText = await res.text();
-    
-    const parseValue = (tag: string) => {
-      const match = xmlText.match(new RegExp(`<${tag}>(.*?)</${tag}>`));
-      return match ? match[1] : 'N/A';
-    };
 
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.status}`);
+    }
+
+    // Parse the response body as JSON
+    const data = await res.json();
+
+    // Return the data by directly accessing the object's properties
+    // The values are converted to strings to match the original function's output
     return {
-      departments: parseValue('departments'),
-      total: parseValue('total'),
-      redressed: parseValue('redressed'),
-      open: parseValue('open'),
+      departments: data.departments?.toString() || 'N/A',
+      total: data.total?.toString() || 'N/A',
+      redressed: data.redressed?.toString() || 'N/A',
+      open: data.open?.toString() || 'N/A',
     };
   } catch (error) {
-    console.error(error);
-    // Return default values in case of an error
+    console.error("Error fetching summary data:", error);
+    // Return a more descriptive error state
     return {
-      departments: "86",
-      total: "45,571",
-      redressed: "25,869",
-      open: "25,869",
+      departments: "Error",
+      total: "Error",
+      redressed: "Error",
+      open: "Error",
     };
   }
 }
+
 
 export default async function HomePage() {
   const summary = await getSummaryData();
@@ -42,7 +43,7 @@ export default async function HomePage() {
       <header className="absolute w-full top-0 z-50 bg-transparent">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={50} height={50} className="h-12 w-12" />
+            <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={50} height={50} className="h-16 w-16" />
             <div className="text-white">
               <div className="text-xl font-bold">GovConnect</div>
               <div className="text-sm">MANIPUR</div>
@@ -233,7 +234,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
               <Link href="#" className="flex items-center gap-2" prefetch={false}>
-                 <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={50} height={50} className="h-12 w-12" />
+                 <Image src="/image/govmanipur_logo.png" alt="GovConnect Logo" width={50} height={50} className="h-16 w-16" />
                 <div className="text-white">
                   <div className="text-xl font-bold">GovConnect</div>
                   <div className="text-sm">MANIPUR</div>
@@ -304,6 +305,8 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    
 
     
 

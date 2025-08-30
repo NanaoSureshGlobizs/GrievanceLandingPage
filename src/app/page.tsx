@@ -21,8 +21,9 @@ async function getSummaryData() {
       total: data.total?.toString() || 'N/A',
       redressed: data.redressed?.toString() || 'N/A',
       open: data.open?.toString() || 'N/A',
+      error: null,
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error fetching summary data:", error);
     // Return a more descriptive error state
     return {
@@ -30,6 +31,7 @@ async function getSummaryData() {
       total: "Error",
       redressed: "Error",
       open: "Error",
+      error: error.message || "An unknown error occurred",
     };
   }
 }
@@ -140,7 +142,14 @@ export default async function HomePage() {
 </div>
             </div>
           </div>
-        </section><section className="w-full py-12 md:py-20 relative overflow-hidden" style={{background: 'linear-gradient(94.6deg, #003688 4.28%, #1AA3D8 107.66%)'}}>
+        </section>
+        {summary.error && (
+          <div className="bg-red-500 text-white p-4 text-center">
+            <p className="font-bold">API Error:</p>
+            <p>{summary.error}</p>
+          </div>
+        )}
+        <section className="w-full py-12 md:py-20 relative overflow-hidden" style={{background: 'linear-gradient(94.6deg, #003688 4.28%, #1AA3D8 107.66%)'}}>
   {/* Background image in bottom right corner */}
   <div className="absolute bottom-0 right-0">
     <Image src="/image/card_background.png" alt="Background decoration" width={200} height={200} className="opacity-30" />
@@ -305,6 +314,8 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    
 
     
 

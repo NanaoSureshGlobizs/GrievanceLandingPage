@@ -22,12 +22,13 @@ async function getSummaryData() {
     };
   } catch (error: any) {
     console.error("Error fetching summary data:", error);
+    const errorMessage = error.message || "An unknown error occurred";
     return {
-      departments: "Error",
-      total: "Error",
-      redressed: "Error",
-      open: "Error",
-      error: error.message || "An unknown error occurred",
+      departments: errorMessage,
+      total: errorMessage,
+      redressed: errorMessage,
+      open: errorMessage,
+      error: errorMessage,
     };
   }
 }
@@ -139,12 +140,7 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
-        {summary.error && (
-          <div className="bg-red-500 text-white p-4 text-center">
-            <p className="font-bold">API Error:</p>
-            <p>{summary.error}</p>
-          </div>
-        )}
+        
         <section className="w-full py-12 md:py-20 relative overflow-hidden" style={{background: 'linear-gradient(94.6deg, #003688 4.28%, #1AA3D8 107.66%)'}}>
   {/* Background image in bottom right corner */}
   <div className="absolute bottom-0 right-0">
@@ -310,13 +306,3 @@ export default async function HomePage() {
     </div>
   );
 }
-
-    
-
-    
-
-    
-
-    
-
-    

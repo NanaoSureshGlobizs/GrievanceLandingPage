@@ -144,7 +144,7 @@ export default async function HomePage() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/10" />
           <div className="container relative mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <div className="space-y-4">

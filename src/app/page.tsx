@@ -351,7 +351,7 @@ export default async function HomePage() {
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
-                    https://manipur.gov.in/
+                    Manipur Portal
                   </Link>
                 </li>
                 <li>
@@ -360,7 +360,7 @@ export default async function HomePage() {
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
-                    https://ditmanipur.gov.in/
+                    Dit Manipur
                   </Link>
                 </li>
               </ul>

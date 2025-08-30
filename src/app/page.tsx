@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { GrievanceChart } from "@/components/grievance-chart";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
@@ -37,6 +38,51 @@ async function getSummaryData() {
 
 export default async function HomePage() {
   const summary = await getSummaryData();
+
+  const features = [
+    {
+      image: "/image/complaint.png",
+      title: "Online Complaint \n Registration",
+      description: "Lodge Complaints Online Anytime With Instant Confirmation.",
+      color: "#8B5FBF",
+      hint: "complaint form"
+    },
+    {
+      image: "/image/Whatsapp.png",
+      title: "WhatsApp Governance Integration",
+      description: "Register And Track Grievances Easily Via WhatsApp.",
+      color: "#4ECDC4",
+      hint: "whatsapp chat"
+    },
+    {
+      image: "/image/Link.png",
+      title: "Eoffice \nLinkage",
+      description: "Seamlessly Route Issues To Officials Through E-Office.",
+      color: "#44A08D",
+      hint: "office connection"
+    },
+    {
+      image: "/image/Accountability.png",
+      title: "Transparency And Accountability",
+      description: "Track Grievance Status In Real-Time With Auto-Escalation.",
+      color: "#2E5266",
+      hint: "transparent gears"
+    },
+    {
+      image: "/image/paperless.png",
+      title: "Paperless, Data-Driven Approach",
+      description: "Reduce Paperwork And Improve Governance With Data.",
+      color: "#8B5FBF",
+      hint: "digital document"
+    },
+    {
+      image: "/image/department.png",
+      title: "Departments\n Covered",
+      description: "Direct Complaints To The Right Department Promptly.",
+      color: "#4ECDC4",
+      hint: "government building"
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-[#111827] text-white">
@@ -207,6 +253,28 @@ export default async function HomePage() {
             <GrievanceChart />
           </div>
         </section>
+
+        <section id="features" className="w-full py-20 md:py-28 bg-gray-50 text-gray-800">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="mb-16 text-center text-4xl font-bold" style={{ color: '#2E5266' }}>
+              Main Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {features.map((feature, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  <Image src={feature.image} alt={feature.title} width={80} height={80} data-ai-hint={feature.hint} />
+                  <h3 className="mt-6 mb-2 text-xl font-bold whitespace-pre-line" style={{ color: feature.color }}>
+                    {feature.title}
+                  </h3>
+                  <p className="max-w-xs text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="about-us" className="w-full bg-white py-20 text-gray-800 md:py-28">
   <div className="container mx-auto px-4 md:px-6">
     <div className="mx-auto max-w-6xl rounded-lg bg-gray-50 px-16 py-12 shadow-lg" style={{border: '1px solid #239BA7'}}>
@@ -307,5 +375,3 @@ export default async function HomePage() {
     </div>
   );
 }
-
-    

@@ -11,11 +11,8 @@ async function getSummaryData() {
       throw new Error(`Failed to fetch data: ${res.status}`);
     }
 
-    // Parse the response body as JSON
     const data = await res.json();
 
-    // Return the data by directly accessing the object's properties
-    // The values are converted to strings to match the original function's output
     return {
       departments: data.departments?.toString() || 'N/A',
       total: data.total?.toString() || 'N/A',
@@ -25,7 +22,6 @@ async function getSummaryData() {
     };
   } catch (error: any) {
     console.error("Error fetching summary data:", error);
-    // Return a more descriptive error state
     return {
       departments: "Error",
       total: "Error",
@@ -314,6 +310,8 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    
 
     
 

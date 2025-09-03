@@ -155,7 +155,7 @@ export default async function HomePage() {
               
               <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-between sm:gap-24">
               <Link
-                href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
+                href="https://govconnectmanipur.mn.gov.in/app/#/citizen-login"
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -167,7 +167,7 @@ export default async function HomePage() {
                 </span>
               </Link>
               <Link
-                href="https://grievancestaging.globizsapp.com/app/#/login"
+                href="https://govconnectmanipur.mn.gov.in/app/#/login"
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -322,7 +322,7 @@ export default async function HomePage() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
+                    href="https://govconnectmanipur.mn.gov.in/app/#/citizen-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
@@ -331,7 +331,7 @@ export default async function HomePage() {
                 </li>
                 <li>
                   <Link
-                    href="https://grievancestaging.globizsapp.com/app/#/official-login"
+                    href="https://govconnectmanipur.mn.gov.in/app/#/official-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >

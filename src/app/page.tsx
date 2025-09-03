@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
-    const res = await fetch('https://grievanceapi.globizsapp.com/api/landing/summary', { next: { revalidate: 3600 } });
+    const res = await fetch('https://grievanceapistaging.globizsapp.com/api/landing/summary', { cache: 'no-store' });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch data: ${res.status}`);
@@ -322,7 +322,7 @@ export default async function HomePage() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="https://govconnectmanipur.mn.gov.in/app/#/citizen-login"
+                    href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
@@ -331,7 +331,7 @@ export default async function HomePage() {
                 </li>
                 <li>
                   <Link
-                    href="https://govconnectmanipur.mn.gov.in/app/#/official-login"
+                    href="https://grievancestaging.globizsapp.com/app/#/official-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >

@@ -118,13 +118,6 @@ export default async function HomePage() {
               Main Features
             </Link>
             <Link
-              href="#home"
-              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
-              prefetch={false}
-            >
-              Track Grv.
-            </Link>
-            <Link
               href="#contact-us"
               className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
               prefetch={false}
@@ -353,7 +346,7 @@ export default async function HomePage() {
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
-                    Dit Manipur
+                    DIT Manipur
                   </Link>
                 </li>
               </ul>

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
-    const res = await fetch('https://grievanceapistaging.globizsapp.com/api/landing/summary', { cache: 'no-store' });
+    const res = await fetch('https://grievanceapi.globizsapp.com/api/landing/summary', { cache: 'no-store' });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch data: ${res.status}`);

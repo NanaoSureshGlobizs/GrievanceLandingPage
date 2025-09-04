@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
-    const res = await fetch('https://grievanceapi.globizsapp.com/api/landing/summary', { cache: 'no-store' });
+    const res = await fetch('https://grievanceapistaging.globizsapp.com/api/landing/summary', { cache: 'no-store' });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch data: ${res.status}`);
@@ -124,7 +124,6 @@ export default async function HomePage() {
             >
               Contact Us
             </Link>
-            
           </nav>
         </div>
       </header>
@@ -148,7 +147,7 @@ export default async function HomePage() {
               
               <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-between sm:gap-24">
               <Link
-                href="https://govconnectmanipur.mn.gov.in/app/#/citizen-login"
+                href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -160,7 +159,7 @@ export default async function HomePage() {
                 </span>
               </Link>
               <Link
-                href="https://govconnectmanipur.mn.gov.in/app"
+                href="https://grievancestaging.globizsapp.com/app"
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >

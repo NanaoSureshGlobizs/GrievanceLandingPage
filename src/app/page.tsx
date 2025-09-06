@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
-    const res = await fetch('https://grievanceapistaging.globizsapp.com/api/landing/summary', { cache: 'no-store' });
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL || 'https://grievanceapistaging.globizsapp.com/api/landing/summary', { cache: 'no-store' });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch data: ${res.status}`);
@@ -145,21 +145,9 @@ export default async function HomePage() {
                 </h1>
               </div>
               
-              <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-between sm:gap-24">
+              <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-center sm:gap-24">
               <Link
-                href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
-                className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
-                prefetch={false}
-              >
-                <div className="flex h-32 w-32 items-center justify-center rounded-lg">
-                  <Image src="/image/citizen_login_normal.png" alt="Citizen" width={128} height={128} />
-                </div>
-                <span className="text-center text-lg font-semibold text-white">
-                  Login as<br/>Citizen
-                </span>
-              </Link>
-              <Link
-                href="https://grievancestaging.globizsapp.com/app"
+                href={process.env.NEXT_PUBLIC_DEPARTMENT_LOGIN_URL || "https://grievancestaging.globizsapp.com/app"}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -314,7 +302,7 @@ export default async function HomePage() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="https://grievancestaging.globizsapp.com/app/#/citizen-login"
+                    href={process.env.NEXT_PUBLIC_CITIZEN_LOGIN_URL || "https://grievancestaging.globizsapp.com/app/#/citizen-login"}
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
@@ -323,7 +311,7 @@ export default async function HomePage() {
                 </li>
                 <li>
                   <Link
-                    href="https://grievancestaging.globizsapp.com/app/#/official-login"
+                    href={process.env.NEXT_PUBLIC_OFFICIAL_LOGIN_URL || "https://grievancestaging.globizsapp.com/app/#/official-login"}
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
@@ -375,3 +363,5 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    

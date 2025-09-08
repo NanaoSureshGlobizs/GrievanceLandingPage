@@ -28,7 +28,7 @@ export function Footer() {
                 
                 <li>
                   <Link
-                    href={process.env.NEXT_PUBLIC_OFFICIAL_LOGIN_URL || "https://govconnectmanipur.mn.gov.in/app/#/official-login"}
+                    href="https://govconnectmanipur.mn.gov.in/app/#/official-login"
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >

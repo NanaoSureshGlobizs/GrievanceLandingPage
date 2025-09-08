@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -159,6 +160,18 @@ export default async function HomePage() {
                 </span>
             </Link>
 
+            <Link
+                href={process.env.NEXT_PUBLIC_CITIZEN_LOGIN_URL || "https://govconnectmanipur.mn.gov.in/app/#/citizen-login"}
+                className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
+                prefetch={false}
+              >
+                <div className="flex h-32 w-32 items-center justify-center rounded-lg">
+                  <Image src="/image/citizen_login_normal.png" alt="Citizen User" width={128} height={128} />
+                </div>
+                <span className="text-center text-lg font-semibold text-white">
+                  Login as<br/>Citizen
+                </span>
+              </Link>
             </div>
             </div>
           </div>

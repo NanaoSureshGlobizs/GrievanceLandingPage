@@ -147,11 +147,7 @@ export default async function HomePage() {
               
               <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-center sm:gap-24">
               <Link
-<<<<<<< HEAD
                 href={process.env.NEXT_PUBLIC_DEPARTMENT_LOGIN_URL || "https://grievancestaging.globizsapp.com/app"}
-=======
-                href="https://govconnectmanipur.mn.gov.in/app"
->>>>>>> 7b45d92 (i want to remove the Login as Citizen button for now)
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -367,5 +363,3 @@ export default async function HomePage() {
     </div>
   );
 }
-
-    

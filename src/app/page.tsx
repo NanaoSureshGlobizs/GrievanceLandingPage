@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,7 +44,8 @@ async function getSummaryData() {
 
 export default async function HomePage() {
   const summary = await getSummaryData();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL;
+  const departmentLoginUrl = process.env.NEXT_PUBLIC_DEPARTMENT_LOGIN_URL;
+  const citizenLoginUrl = process.env.NEXT_PUBLIC_CITIZEN_LOGIN_URL;
 
   const features = [
     {
@@ -153,7 +155,7 @@ export default async function HomePage() {
               
               <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-center sm:gap-24">
               <Link
-                href={`${appUrl}/app`}
+                href={departmentLoginUrl || '#'}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -165,7 +167,7 @@ export default async function HomePage() {
                 </span>
             </Link>
             <Link
-                href={`${appUrl}/app/#/citizen-login`}
+                href={citizenLoginUrl || '#'}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >

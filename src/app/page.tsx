@@ -161,10 +161,9 @@ export default async function HomePage() {
               </div>
               
               <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-center sm:gap-24">
-              <Link
+              <a
                 href={departmentLoginUrl || '#'}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
-                prefetch={false}
               >
                 <div className="flex h-32 w-32 items-center justify-center rounded-lg">
                   <Image src="/image/department_login_normal.png" alt="Department User" width={128} height={128} />
@@ -172,11 +171,10 @@ export default async function HomePage() {
                 <span className="text-center text-lg font-semibold text-white">
                   Login as<br/>Department
                 </span>
-            </Link>
-            <Link
+            </a>
+            <a
                 href={citizenLoginUrl || '#'}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
-                prefetch={false}
               >
                 <div className="flex h-32 w-32 items-center justify-center rounded-lg">
                   <Image src="/image/citizen_login_normal.png" alt="Citizen User" width={128} height={128} />
@@ -184,7 +182,7 @@ export default async function HomePage() {
                 <span className="text-center text-lg font-semibold text-white">
                   Login as<br/>Citizen
                 </span>
-            </Link>
+            </a>
             </div>
             </div>
           </div>

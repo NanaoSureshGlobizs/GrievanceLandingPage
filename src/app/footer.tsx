@@ -28,13 +28,12 @@ export function Footer() {
               <ul className="space-y-2">
                 
                 <li>
-                  <Link
+                  <a
                     href={officialLoginUrl || '#'}
                     className="text-sm text-white/70 hover:text-white"
-                    prefetch={false}
                   >
                     Official Login
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link

@@ -7,7 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
-    const res = await fetch('https://grievanceapi.globizsapp.com/api/landing/summary', { cache: 'no-store' });
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://grievanceapi.globizsapp.com';
+    const res = await fetch(`${apiUrl}/api/landing/summary`, { cache: 'no-store' });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch data: ${res.status}`);
@@ -39,6 +40,7 @@ async function getSummaryData() {
 
 export default async function HomePage() {
   const summary = await getSummaryData();
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://govconnectmanipur.mn.gov.in';
 
   const features = [
     {
@@ -148,7 +150,7 @@ export default async function HomePage() {
               
               <div className="flex flex-col items-center gap-10 pt-8 sm:flex-row sm:justify-center sm:gap-24">
               <Link
-                href="https://govconnectmanipur.mn.gov.in/app"
+                href={`${appUrl}/app`}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -160,7 +162,7 @@ export default async function HomePage() {
                 </span>
             </Link>
             <Link
-                href="https://govconnectmanipur.mn.gov.in/app/#/citizen-login"
+                href={`${appUrl}/app/#/citizen-login`}
                 className="group flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
                 prefetch={false}
               >
@@ -314,7 +316,7 @@ export default async function HomePage() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="https://govconnectmanipur.mn.gov.in/app/#/citizen-login"
+                    href={`${appUrl}/app/#/citizen-login`}
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >
@@ -323,7 +325,7 @@ export default async function HomePage() {
                 </li>
                 <li>
                   <Link
-                    href="https://govconnectmanipur.mn.gov.in/app/#/official-login"
+                    href={`${appUrl}/app/#/official-login`}
                     className="text-sm text-white/70 hover:text-white"
                     prefetch={false}
                   >

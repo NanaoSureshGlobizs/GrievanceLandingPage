@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://govconnectmanipur.mn.gov.in';
+    const appUrl = 'https://govconnectmanipur.mn.gov.in';
     return (
         <footer id="contact-us" className="w-full bg-blue-900 text-white">
         <div className="container mx-auto px-4 py-12 md:px-6">

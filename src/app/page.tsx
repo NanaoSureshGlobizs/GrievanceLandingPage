@@ -9,7 +9,9 @@ import { Footer } from "@/app/footer";
 async function getSummaryData() {
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    const res = await fetch(`${apiUrl}/landing/summary`, { cache: 'no-store' });
+    const fetchUrl = `${apiUrl}/landing/summary`;
+    console.log(`Fetching summary data from: ${fetchUrl}`);
+    const res = await fetch(fetchUrl, { cache: 'no-store' });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch data: ${res.status}`);

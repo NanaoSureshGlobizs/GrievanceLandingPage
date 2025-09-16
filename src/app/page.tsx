@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 async function getSummaryData() {
   try {
-    const apiUrl = 'https://grievanceapi.globizsapp.com';
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     const res = await fetch(`${apiUrl}/api/landing/summary`, { cache: 'no-store' });
 
     if (!res.ok) {
@@ -40,7 +40,7 @@ async function getSummaryData() {
 
 export default async function HomePage() {
   const summary = await getSummaryData();
-  const appUrl = 'https://govconnectmanipur.mn.gov.in';
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL;
 
   const features = [
     {

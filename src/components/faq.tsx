@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "How can I register a grievance?",
     answer:
-      "You can register a grievance through multiple channels: by logging into the citizen portal on this website, or via our integrated WhatsApp service. Simply follow the prompts to provide the necessary details about your issue.",
+      "You can register by clicking 'Login as Citizen' and entering your mobile number. You'll receive an OTP for verification. If you're a new user, you'll be prompted to create a profile. Once logged in, you can submit and track your grievances.",
   },
   {
     question: "How can I track the status of my grievance?",

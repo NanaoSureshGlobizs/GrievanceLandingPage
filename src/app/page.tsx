@@ -9,7 +9,7 @@ import { Footer } from "@/app/footer";
 async function getSummaryData() {
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    const fetchUrl = `${apiUrl}/landing/summary`;
+    const fetchUrl = apiUrl;
     console.log(`Fetching summary data from: ${fetchUrl}`);
     const res = await fetch(fetchUrl, { cache: 'no-store' });
 

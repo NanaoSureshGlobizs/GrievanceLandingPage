@@ -1,11 +1,11 @@
 
-
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { GrievanceChart } from "@/components/grievance-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Footer } from "@/app/footer";
+import { Faq } from "@/components/faq";
 
 async function getSummaryData() {
   try {
@@ -124,6 +124,13 @@ export default async function HomePage() {
               prefetch={false}
             >
               Main Features
+            </Link>
+            <Link
+              href="#faq"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
+              prefetch={false}
+            >
+              FAQ
             </Link>
             <Link
               href="#contact-us"
@@ -273,29 +280,38 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="about-us" className="w-full bg-white py-20 text-gray-800 md:py-28">
-  <div className="container mx-auto px-4 md:px-6">
-    <div className="mx-auto max-w-6xl rounded-lg bg-gray-50 px-16 py-12 shadow-lg" style={{border: '1px solid #239BA7'}}>
-      <h2 className="mb-6 text-4xl font-bold">About Us</h2>
-      <h3 className="mb-6 text-2xl font-semibold text-gray-600">
-        Empowering Every Citizen, Strengthening Every Voice
-      </h3>
-      <p className="text-lg text-gray-600 mb-6">
-        To build a transparent, accountable, and citizen-centric
-        governance system in Manipur that bridges the gap between the
-        government and the people. We envision a digital platform where
-        every voice matters, every grievance is addressed promptly, and
-        every initiative is accessible to all.
-      </p>
-      <p className="text-lg text-gray-600">
-        By leveraging technology, we aim to foster trust, streamline
-        public service delivery, and create a responsive
-        administration that works hand-in-hand with the citizens for
-        the holistic development of Manipur.
-      </p>
-    </div>
-  </div>
-</section>
+        <section id="faq" className="w-full py-20 md:py-28 bg-white text-gray-800">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="mb-16 text-center text-4xl font-bold" style={{ color: '#2E5266' }}>
+              Frequently Asked Questions
+            </h2>
+            <Faq />
+          </div>
+        </section>
+
+        <section id="about-us" className="w-full bg-gray-50 py-20 text-gray-800 md:py-28">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mx-auto max-w-6xl rounded-lg bg-white px-16 py-12 shadow-lg" style={{border: '1px solid #239BA7'}}>
+              <h2 className="mb-6 text-4xl font-bold">About Us</h2>
+              <h3 className="mb-6 text-2xl font-semibold text-gray-600">
+                Empowering Every Citizen, Strengthening Every Voice
+              </h3>
+              <p className="text-lg text-gray-600 mb-6">
+                To build a transparent, accountable, and citizen-centric
+                governance system in Manipur that bridges the gap between the
+                government and the people. We envision a digital platform where
+                every voice matters, every grievance is addressed promptly, and
+                every initiative is accessible to all.
+              </p>
+              <p className="text-lg text-gray-600">
+                By leveraging technology, we aim to foster trust, streamline
+                public service delivery, and create a responsive
+                administration that works hand-in-hand with the citizens for
+                the holistic development of Manipur.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

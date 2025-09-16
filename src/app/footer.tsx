@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
-    const officialLoginUrl = process.env.NEXT_PUBLIC_OFFICIAL_LOGIN_URL;
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL;
+    const officialLoginUrl = `${appUrl}/#/official-login`;
     return (
         <footer id="contact-us" className="w-full bg-blue-900 text-white">
         <div className="container mx-auto px-4 py-12 md:px-6">

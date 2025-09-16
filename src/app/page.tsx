@@ -44,8 +44,9 @@ async function getSummaryData() {
 
 export default async function HomePage() {
   const summary = await getSummaryData();
-  const departmentLoginUrl = process.env.NEXT_PUBLIC_DEPARTMENT_LOGIN_URL;
-  const citizenLoginUrl = process.env.NEXT_PUBLIC_CITIZEN_LOGIN_URL;
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL;
+  const departmentLoginUrl = appUrl;
+  const citizenLoginUrl = `${appUrl}/#/citizen-login`;
 
   const features = [
     {

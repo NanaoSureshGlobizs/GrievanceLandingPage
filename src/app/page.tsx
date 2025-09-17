@@ -46,7 +46,7 @@ async function getSummaryData() {
 export default async function HomePage() {
   const summary = await getSummaryData();
   const appUrl = process.env.NEXT_PUBLIC_APP_URL;
-  const departmentLoginUrl = appUrl;
+  const departmentLoginUrl = `${appUrl}/#/login`;
   const citizenLoginUrl = `${appUrl}/#/citizen-login`;
 
   const features = [
@@ -293,7 +293,7 @@ export default async function HomePage() {
               User Guide
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
-              <a href="/GovConnect-User-Manual.pdf" download className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+              <a href="https://drive.google.com/file/d/1owem2tx0Kia6-2FmKsvBKQ0f000tYBg0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                 <Download className="h-16 w-16 text-blue-600" />
                 <h3 className="mt-6 mb-3 text-2xl font-bold text-blue-600">
                   User Manual

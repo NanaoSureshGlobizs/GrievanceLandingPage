@@ -6,6 +6,7 @@ import { GrievanceChart } from "@/components/grievance-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Footer } from "@/app/footer";
 import { Faq } from "@/components/faq";
+import { Download, Video } from "lucide-react";
 
 async function getSummaryData() {
   try {
@@ -125,6 +126,13 @@ export default async function HomePage() {
               prefetch={false}
             >
               Main Features
+            </Link>
+            <Link
+              href="#user-guide"
+              className="text-sm font-medium text-white/80 hover:text-white px-3 py-1"
+              prefetch={false}
+            >
+              User Guide
             </Link>
             <Link
               href="#faq"
@@ -258,7 +266,7 @@ export default async function HomePage() {
           </div>
         </section> */}
 
-        <section id="features" className="w-full py-20 md:py-28 bg-gray-50 text-gray-800">
+        <section id="features" className="w-full py-20 md:py-28 bg-white text-gray-800">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="mb-16 text-center text-4xl font-bold" style={{ color: '#2E5266' }}>
               Main Features
@@ -275,6 +283,34 @@ export default async function HomePage() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="user-guide" className="w-full py-20 md:py-28 bg-gray-50 text-gray-800">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="mb-16 text-center text-4xl font-bold" style={{ color: '#2E5266' }}>
+              User Guide
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
+              <a href="/GovConnect-User-Manual.pdf" download className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                <Download className="h-16 w-16 text-blue-600" />
+                <h3 className="mt-6 mb-3 text-2xl font-bold text-blue-600">
+                  User Manual
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Download the detailed user manual in PDF format to learn how to use the portal.
+                </p>
+              </a>
+              <a href="https://drive.google.com/file/d/1r8cTI77s0Ke5AH-upUjOWorgHaVLqQ-8/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex max-w-xs flex-col items-center text-center bg-white p-8 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                <Video className="h-16 w-16 text-red-600" />
+                <h3 className="mt-6 mb-3 text-2xl font-bold text-red-600">
+                  Video Tutorial
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Watch our step-by-step video tutorial to get a visual guide on lodging and tracking grievances.
+                </p>
+              </a>
             </div>
           </div>
         </section>
@@ -316,5 +352,3 @@ export default async function HomePage() {
     </div>
   );
 }
-
-    
